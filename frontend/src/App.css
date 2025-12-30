@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --brand-blue: #0d6efd;
+  --brand-green: #00c896;
+  --brand-dark: #030b19;
+  --brand-mid: #052044;
+  --brand-light: #f4fbff;
+  --brand-muted: #6d7a91;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--brand-light) 0%, #edf4ff 100%);
+}
+
+.app-main {
+  padding-bottom: 3rem;
+}
+
+.navbar {
+  background: rgba(3, 11, 34, 0.92) !important;
+  backdrop-filter: blur(12px);
+  position: relative;
+  z-index: 1030;
+}
+
+.navbar .dropdown-menu {
+  z-index: 1031;
+}
+
+.navbar-brand {
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.btn-accent,
+.btn-pill {
+  border-radius: 999px;
+  padding: 0.6rem 1.5rem;
+  background: linear-gradient(120deg, var(--brand-green), var(--brand-blue));
+  color: #fff;
+  border: none;
+  font-weight: 600;
+}
+
+.btn-accent:hover,
+.btn-pill:hover {
+  color: #fff;
+  opacity: 0.9;
+}
+
+.btn-ghost {
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0.6rem 1.5rem;
+  color: #fff;
+}
+
+.home-hero {
+  background: radial-gradient(circle at 15% 20%, rgba(0, 200, 150, 0.35), transparent 55%),
+    radial-gradient(circle at 80% 0%, rgba(13, 110, 253, 0.35), transparent 60%),
+    var(--brand-dark);
+  color: #fff;
+  border-bottom-left-radius: 48px;
+  border-bottom-right-radius: 48px;
+  padding-bottom: 3rem;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 1.75rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.stat-chip {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.stat-chip strong {
+  display: block;
+  font-size: 1.5rem;
+}
+
+.feature-section {
+  margin-top: -2rem;
+}
+
+.feature-card {
+  border: none;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 20px 45px rgba(5, 20, 49, 0.08);
+  min-height: 100%;
+}
+
+.feature-chip {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  background: rgba(13, 110, 253, 0.1);
+  color: var(--brand-blue);
+}
+
+.job-card,
+.dashboard-card {
+  border-radius: 1rem;
+  background: #fff;
+  border: 1px solid rgba(8, 20, 51, 0.06);
+  box-shadow: 0 15px 40px rgba(6, 28, 68, 0.08);
+}
+
+.table-responsive {
+  border-radius: 0.9rem;
+}
+
+.bg-secondary-subtle {
+  background-color: rgba(13, 110, 253, 0.12) !important;
+  color: var(--brand-blue) !important;
+}
+
+.bg-info-subtle {
+  background-color: rgba(0, 200, 150, 0.12) !important;
+  color: var(--brand-green) !important;
+}
+
+.bg-success-subtle {
+  background-color: rgba(0, 200, 150, 0.18) !important;
+  color: #024d37 !important;
+}
+
+.table thead {
+  background: var(--brand-light);
+}
+
+/* Profile Page Enhancements */
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.profile-header-gradient {
+  background: linear-gradient(135deg, var(--brand-green), var(--brand-blue));
+}
+
+.profile-picture-wrapper {
+  transition: all 0.3s ease;
+}
+
+.profile-picture-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.badge.bg-primary.bg-opacity-10 {
+  background-color: rgba(13, 110, 253, 0.1) !important;
+  color: var(--brand-blue) !important;
+  border: 1px solid rgba(13, 110, 253, 0.2);
+}
+
+.skill-badge {
+  transition: all 0.2s ease;
+}
+
+.skill-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info-icon {
+  color: var(--brand-blue);
+  opacity: 0.7;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--brand-blue);
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+.card-header.position-relative {
+  overflow: hidden;
+}
+
+.card-header.position-relative::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .profile-picture-wrapper {
+    margin-top: -60px !important;
+  }
+  
+  .profile-picture-wrapper > div {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}

@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --brand-blue: #0d6efd;
+  --brand-green: #00c896;
+  --brand-dark: #030b19;
+  --brand-mid: #052044;
+  --brand-light: #f4fbff;
+  --brand-muted: #6d7a91;
+  --brand-accent: #4a89e7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--brand-light);
+  color: var(--brand-dark);
+}
+
+.admin-app {
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--brand-light) 0%, #edf4ff 100%);
+}
+
+/* ==================== NAVBAR ==================== */
+.admin-navbar {
+  background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand-mid) 100%) !important;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(3, 11, 25, 0.25);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  border-bottom: 3px solid rgba(0, 200, 150, 0.3);
+}
+
+.admin-navbar .navbar-brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: linear-gradient(120deg, var(--brand-green), var(--brand-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.admin-navbar .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.admin-navbar .nav-link:hover {
+  color: var(--brand-green) !important;
+}
+
+.admin-badge {
+  background: rgba(0, 200, 150, 0.2);
+  color: #fff;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+  border: 1px solid rgba(0, 200, 150, 0.3);
+}
+
+/* ==================== CARDS ==================== */
+.card-dark {
+  background: #fff;
+  border: 1px solid rgba(8, 20, 51, 0.08);
+  border-radius: 1.2rem;
+  box-shadow: 0 10px 30px rgba(3, 11, 25, 0.06);
+  transition: all 0.3s ease;
+}
+
+.card-dark:hover {
+  box-shadow: 0 15px 40px rgba(3, 11, 25, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Section-specific card backgrounds */
+.card-students {
+  background: #fff;
+  border-left: 5px solid var(--brand-blue);
+  border-top: 1px solid rgba(13, 110, 253, 0.12);
+  border-right: 1px solid rgba(13, 110, 253, 0.08);
+  border-bottom: 1px solid rgba(13, 110, 253, 0.08);
+  box-shadow: 0 10px 30px rgba(13, 110, 253, 0.1);
+}
+
+.card-students:hover {
+  box-shadow: 0 15px 40px rgba(13, 110, 253, 0.18);
+  transform: translateY(-3px);
+}
+
+.card-recruiters {
+  background: #fff;
+  border-left: 5px solid var(--brand-green);
+  border-top: 1px solid rgba(0, 200, 150, 0.12);
+  border-right: 1px solid rgba(0, 200, 150, 0.08);
+  border-bottom: 1px solid rgba(0, 200, 150, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 200, 150, 0.1);
+}
+
+.card-recruiters:hover {
+  box-shadow: 0 15px 40px rgba(0, 200, 150, 0.18);
+  transform: translateY(-3px);
+}
+
+.card-jobs {
+  background: #fff;
+  border-left: 5px solid var(--brand-accent);
+  border-top: 1px solid rgba(74, 137, 231, 0.12);
+  border-right: 1px solid rgba(74, 137, 231, 0.08);
+  border-bottom: 1px solid rgba(74, 137, 231, 0.08);
+  box-shadow: 0 10px 30px rgba(74, 137, 231, 0.1);
+}
+
+.card-jobs:hover {
+  box-shadow: 0 15px 40px rgba(74, 137, 231, 0.18);
+  transform: translateY(-3px);
+}
+
+/* ==================== METRIC CARDS ==================== */
+.metric-card {
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.06) 0%, rgba(244, 251, 255, 1) 100%);
+  border: 2px solid rgba(13, 110, 253, 0.15);
+  border-radius: 1.3rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(13, 110, 253, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(30%, -30%);
+}
+
+.metric-card:hover {
+  border-color: rgba(13, 110, 253, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(13, 110, 253, 0.2);
+}
+
+.metric-card.green {
+  background: linear-gradient(135deg, rgba(0, 200, 150, 0.06) 0%, rgba(244, 251, 255, 1) 100%);
+  border-color: rgba(0, 200, 150, 0.15);
+}
+
+.metric-card.green::before {
+  background: radial-gradient(circle, rgba(0, 200, 150, 0.1) 0%, transparent 70%);
+}
+
+.metric-card.green:hover {
+  border-color: rgba(0, 200, 150, 0.35);
+  box-shadow: 0 15px 35px rgba(0, 200, 150, 0.2);
+}
+
+.metric-label {
+  font-size: 0.8rem;
+  color: var(--brand-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+
+.metric-value {
+  font-size: 2.8rem;
+  font-weight: 700;
+  background: linear-gradient(120deg, var(--brand-blue), var(--brand-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+}
+
+/* ==================== BUTTONS ==================== */
+.btn-accent {
+  border-radius: 999px;
+  padding: 0.65rem 1.75rem;
+  background: linear-gradient(120deg, var(--brand-green), var(--brand-blue));
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(13, 110, 253, 0.3);
+}
+
+.btn-accent:hover {
+  opacity: 0.92;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(13, 110, 253, 0.4);
+}
+
+.btn-outline-primary {
+  border-radius: 999px;
+  padding: 0.65rem 1.75rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.btn-outline-primary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-outline-danger {
+  border-radius: 8px;
+  border: 1.5px solid #dc3545;
+  color: #dc3545;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  padding: 0.4rem 0.9rem;
+}
+
+.btn-outline-danger:hover {
+  background: #dc3545;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+/* ==================== TABLES ==================== */
+.table-dark {
+  color: var(--brand-dark);
+  background: #fff;
+}
+
+.table-dark thead th {
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.08) 0%, rgba(244, 251, 255, 1) 100%);
+  border-bottom: 2px solid rgba(13, 110, 253, 0.2);
+  color: var(--brand-mid);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  padding: 1.1rem 0.85rem;
+}
+
+.table-dark tbody tr {
+  border-color: rgba(8, 20, 51, 0.08);
+  transition: all 0.2s ease;
+}
+
+.table-dark tbody tr:hover {
+  background: linear-gradient(90deg, rgba(13, 110, 253, 0.03) 0%, rgba(244, 251, 255, 0.5) 100%);
+}
+
+.table-dark tbody td {
+  padding: 1rem 0.85rem;
+}
+
+/* ==================== BADGES ==================== */
+.badge-soft {
+  background: rgba(13, 110, 253, 0.15);
+  color: var(--brand-blue);
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  border: 1px solid rgba(13, 110, 253, 0.2);
+}
+
+.badge-soft.success {
+  background: rgba(0, 200, 150, 0.15);
+  color: var(--brand-green);
+  border-color: rgba(0, 200, 150, 0.25);
+}
+
+.badge-soft.warning {
+  background: rgba(255, 193, 7, 0.15);
+  color: #f57c00;
+  border-color: rgba(255, 193, 7, 0.25);
+}
+
+/* ==================== SECTION HEADERS ==================== */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 2px solid rgba(8, 20, 51, 0.1);
+}
+
+.section-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--brand-mid);
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Section-specific headers */
+.card-students .section-header {
+  border-bottom-color: rgba(13, 110, 253, 0.25);
+}
+
+.card-students .section-title {
+  color: var(--brand-blue);
+}
+
+.card-recruiters .section-header {
+  border-bottom-color: rgba(0, 200, 150, 0.25);
+}
+
+.card-recruiters .section-title {
+  color: var(--brand-green);
+}
+
+.card-jobs .section-header {
+  border-bottom-color: rgba(74, 137, 231, 0.25);
+}
+
+.card-jobs .section-title {
+  color: var(--brand-accent);
+}
+
+/* ==================== FORM CONTROLS ==================== */
+.form-control {
+  border-radius: 0.85rem;
+  border: 2px solid rgba(8, 20, 51, 0.12);
+  padding: 0.85rem 1.1rem;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.form-control:focus {
+  border-color: var(--brand-blue);
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+  outline: none;
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--brand-mid);
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+}
+
+/* ==================== ALERTS ==================== */
+.alert {
+  border-radius: 1rem;
+  border: none;
+  padding: 1.1rem 1.4rem;
+  font-weight: 500;
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, rgba(220, 53, 69, 0.12) 0%, rgba(220, 53, 69, 0.08) 100%);
+  color: #c82333;
+  border-left: 4px solid #dc3545;
+}
+
+.alert-warning {
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.12) 0%, rgba(255, 193, 7, 0.08) 100%);
+  color: #f57c00;
+  border-left: 4px solid #ffc107;
+}
+
+/* ==================== PAGE HEADER ==================== */
+.page-header {
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.1) 0%, rgba(0, 200, 150, 0.1) 100%);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid rgba(13, 110, 253, 0.15);
+}
+
+.page-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--brand-dark);
+  margin: 0;
+  background: linear-gradient(120deg, var(--brand-dark), var(--brand-mid));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-subtitle {
+  color: var(--brand-muted);
+  font-size: 1.05rem;
+  margin-top: 0.6rem;
+  font-weight: 500;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .metric-value {
+    font-size: 2.2rem;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .page-title {
+    font-size: 1.8rem;
+  }
+  
+  .admin-navbar .navbar-brand {
+    font-size: 1.1rem;
+  }
+}
